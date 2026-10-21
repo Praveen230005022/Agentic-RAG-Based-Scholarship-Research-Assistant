@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scholarship-assistant"
+version = "0.1.0"
+description = "Agentic RAG-based scholarship research assistant (LangChain, Groq, FAISS, Streamlit)"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = [
+    "ignore:`langchain-community` is being sunset:DeprecationWarning",
+]
